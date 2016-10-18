@@ -87,4 +87,11 @@ public class Ocorrencia {
         return this.data;
     }
 
+    	public boolean validarDados(Double latitude, Double longitude, String titulo){
+		if( latitude != null && longitude != null && titulo != null && (!titulo.equals("")) ) {
+            return true;
+        }if( (titulo == null || titulo.equals("") && (latitude != null || longitude != null)))  {
+            return false;
+		}		
+	}
 }
